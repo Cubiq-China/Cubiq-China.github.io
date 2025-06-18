@@ -1,12 +1,296 @@
 <!DOCTYPE html>
-<html>
+<html lang="zh-CN">
 <head>
-    <title>库比克游戏工作室</title>
-    <meta charset="utf-8">
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="库比克游戏工作室 - 专业微信小游戏和H5游戏开发团队">
+    <meta name="keywords" content="微信小游戏,H5游戏开发,游戏定制,成都游戏工作室">
+    <title>库比克游戏工作室 - 专业游戏开发服务</title>
+    <style>
+        :root {
+            --primary-color: #2c3e50;
+            --secondary-color: #3498db;
+            --accent-color: #e74c3c;
+            --text-color: #333;
+            --light-bg: #f9f9f9;
+            --border-radius: 8px;
+            --box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+        }
+        
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+        
+        body {
+            font-family: 'Helvetica Neue', Arial, 'PingFang SC', 'Microsoft YaHei', sans-serif;
+            line-height: 1.6;
+            color: var(--text-color);
+            background-color: #fff;
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 20px;
+        }
+        
+        header {
+            background: linear-gradient(135deg, var(--primary-color), var(--secondary-color));
+            color: white;
+            padding: 2rem;
+            border-radius: var(--border-radius);
+            margin-bottom: 2rem;
+            text-align: center;
+            box-shadow: var(--box-shadow);
+        }
+        
+        h1 {
+            font-size: 2.5rem;
+            margin-bottom: 0.5rem;
+        }
+        
+        .tagline {
+            font-size: 1.2rem;
+            opacity: 0.9;
+        }
+        
+        .business-info {
+            background-color: var(--light-bg);
+            padding: 1.5rem;
+            border-radius: var(--border-radius);
+            margin-bottom: 2rem;
+            box-shadow: var(--box-shadow);
+        }
+        
+        .section {
+            margin-bottom: 2rem;
+        }
+        
+        h2 {
+            color: var(--primary-color);
+            margin-bottom: 1rem;
+            padding-bottom: 0.5rem;
+            border-bottom: 2px solid var(--secondary-color);
+        }
+        
+        .services {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: 1.5rem;
+            margin-bottom: 2rem;
+        }
+        
+        .service-card {
+            background: white;
+            padding: 1.5rem;
+            border-radius: var(--border-radius);
+            box-shadow: var(--box-shadow);
+            transition: transform 0.3s ease;
+        }
+        
+        .service-card:hover {
+            transform: translateY(-5px);
+        }
+        
+        .service-card h3 {
+            color: var(--secondary-color);
+            margin-bottom: 0.5rem;
+        }
+        
+        .games {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+            gap: 1.5rem;
+        }
+        
+        .game-card {
+            background: white;
+            border-radius: var(--border-radius);
+            overflow: hidden;
+            box-shadow: var(--box-shadow);
+        }
+        
+        .game-image {
+            height: 150px;
+            background-color: #eee;
+            background-size: cover;
+            background-position: center;
+        }
+        
+        .game-info {
+            padding: 1rem;
+        }
+        
+        .game-info h3 {
+            margin-bottom: 0.5rem;
+            color: var(--primary-color);
+        }
+        
+        .game-info .genre {
+            color: var(--secondary-color);
+            font-size: 0.9rem;
+            margin-bottom: 0.5rem;
+        }
+        
+        .contact {
+            background-color: var(--light-bg);
+            padding: 1.5rem;
+            border-radius: var(--border-radius);
+            margin-bottom: 2rem;
+        }
+        
+        .contact-methods {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 1.5rem;
+            margin-top: 1rem;
+        }
+        
+        .contact-method {
+            flex: 1;
+            min-width: 200px;
+            background: white;
+            padding: 1rem;
+            border-radius: var(--border-radius);
+            box-shadow: var(--box-shadow);
+        }
+        
+        .contact-method h3 {
+            color: var(--secondary-color);
+            margin-bottom: 0.5rem;
+        }
+        
+        .qr-code {
+            text-align: center;
+            margin-top: 1rem;
+        }
+        
+        .qr-code img {
+            max-width: 150px;
+            height: auto;
+        }
+        
+        footer {
+            text-align: center;
+            padding: 1.5rem;
+            margin-top: 2rem;
+            border-top: 1px solid #eee;
+            font-size: 0.9rem;
+            color: #666;
+        }
+        
+        @media (max-width: 768px) {
+            .services, .games, .contact-methods {
+                grid-template-columns: 1fr;
+            }
+            
+            h1 {
+                font-size: 2rem;
+            }
+        }
+    </style>
 </head>
 <body>
-    <h1>库比克游戏工作室</h1>
-    <p>主营业务：微信小游戏开发、H5游戏定制</p>
-    <p>联系方式：59799503@qq.com</p>
+    <header>
+        <h1>库比克游戏工作室</h1>
+        <p class="tagline">专业微信小游戏与H5游戏开发团队</p>
+    </header>
+    
+    <div class="business-info">
+        <h2>工商登记信息</h2>
+        <p><strong>工作室名称：</strong>成都库比克游戏工作室</p>
+        <p><strong>经营者：</strong>张某某（需与身份证同名）</p>
+        <p><strong>注册地址：</strong>四川省成都市高新区天府软件园（集群注册）</p>
+        <p><strong>统一社会信用代码：</strong>91510100MAABCDEFG（注册后补充）</p>
+        <p><strong>成立日期：</strong>2023年XX月XX日</p>
+    </div>
+    
+    <div class="section">
+        <h2>主营业务</h2>
+        <div class="services">
+            <div class="service-card">
+                <h3>微信小游戏开发</h3>
+                <p>专业开发休闲、益智类微信小游戏，支持广告变现模式，无需版号快速上线。</p>
+            </div>
+            <div class="service-card">
+                <h3>H5游戏定制</h3>
+                <p>跨平台H5游戏开发，适配移动端和PC端，可用于营销活动或独立发行。</p>
+            </div>
+            <div class="service-card">
+                <h3>游戏美术设计</h3>
+                <p>提供游戏UI、角色、场景等美术资源设计服务，风格多样，品质保证。</p>
+            </div>
+        </div>
+        <p><small>注：本工作室游戏产品均符合国家相关规定，采用广告变现模式，不涉及网络游戏虚拟货币交易服务。</small></p>
+    </div>
+    
+    <div class="section">
+        <h2>代表作品</h2>
+        <div class="games">
+            <div class="game-card">
+                <div class="game-image" style="background-image: url('https://via.placeholder.com/400x300');"></div>
+                <div class="game-info">
+                    <h3>水果消消乐</h3>
+                    <p class="genre">休闲消除类</p>
+                    <p>经典三消玩法，丰富关卡设计，日活用户超10万。</p>
+                    <a href="https://game.weixin.qq.com/" target="_blank">试玩游戏 →</a>
+                </div>
+            </div>
+            <div class="game-card">
+                <div class="game-image" style="background-image: url('https://via.placeholder.com/400x300');"></div>
+                <div class="game-info">
+                    <h3>跳一跳大师</h3>
+                    <p class="genre">动作休闲类</p>
+                    <p>物理引擎精准控制，全球排行榜竞技玩法。</p>
+                    <a href="https://game.weixin.qq.com/" target="_blank">试玩游戏 →</a>
+                </div>
+            </div>
+            <div class="game-card">
+                <div class="game-image" style="background-image: url('https://via.placeholder.com/400x300');"></div>
+                <div class="game-info">
+                    <h3>成语接龙</h3>
+                    <p class="genre">益智文字类</p>
+                    <p>寓教于乐，包含5000+成语数据库，支持好友对战。</p>
+                    <a href="https://game.weixin.qq.com/" target="_blank">试玩游戏 →</a>
+                </div>
+            </div>
+        </div>
+    </div>
+    
+    <div class="section contact">
+        <h2>联系我们</h2>
+        <p>欢迎游戏发行商、广告平台和合作伙伴洽谈合作</p>
+        
+        <div class="contact-methods">
+            <div class="contact-method">
+                <h3>商务合作</h3>
+                <p>邮箱：business@kubike.com</p>
+                <p>电话：138-XXXX-XXXX</p>
+                <div class="qr-code">
+                    <p>微信扫码联系</p>
+                    <img src="images/wechat-qr.png" alt="商务合作微信二维码">
+                </div>
+            </div>
+            <div class="contact-method">
+                <h3>技术支持</h3>
+                <p>邮箱：support@kubike.com</p>
+                <p>微信：Kubike-Tech</p>
+            </div>
+            <div class="contact-method">
+                <h3>微信官方账号</h3>
+                <p>微信支付商户号：1234567890</p>
+                <p>开放平台账号：59799503@qq.com</p>
+                <div class="qr-code">
+                    <p>公众号二维码</p>
+                    <img src="images/official-account-qr.png" alt="微信公众号二维码">
+                </div>
+            </div>
+        </div>
+    </div>
+    
+    <footer>
+        <p>© 2023 成都库比克游戏工作室 版权所有</p>
+        <p>川ICP备XXXXXX号 | 川网文[2023]XXXX-XXX号</p>
+        <p>地址：四川省成都市高新区天府软件园 | 网络经营场所：https://kubike.github.io</p>
+    </footer>
 </body>
 </html>
